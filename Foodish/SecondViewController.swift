@@ -15,7 +15,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate
      
     }
    
-    //Delegate驗證欄位
+    //textFieldDelegate驗證欄位
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
     {
         //限制只能打數字及字數限制
@@ -40,4 +40,17 @@ class SecondViewController: UIViewController, UITextFieldDelegate
         
         return true
     }
+    
+    //亂數按鈕產生1~20並且填入textfield中
+    @IBAction func RandomButtonAction(_ sender: UIButton)
+    {
+        let Number = Int.random(in: 1...20)
+        NumberTextField.text = "\(Number)"
+        
+    }
+    
+    
+    
+    
+    
 }

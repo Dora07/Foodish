@@ -22,6 +22,9 @@
                                 <state key="normal" title="Button" image="Group 1412">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="RandomButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="587-KL-Xf4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUG-se-ti0">
                                 <rect key="frame" x="112" y="320" width="193" height="42"/>
@@ -51,7 +54,7 @@
                                 <rect key="frame" x="51" y="219" width="326" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="light" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dp6-lU-3e1">
                                 <rect key="frame" x="0.0" y="433" width="414" height="452"/>
