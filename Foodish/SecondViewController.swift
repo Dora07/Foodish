@@ -1,7 +1,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITextFieldDelegate
+class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate
 {
 
     
@@ -13,6 +13,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate
         super.viewDidLoad()
         NumberTextField.delegate = self
      
+    
+        
     }
    
     //textFieldDelegate驗證欄位
@@ -26,7 +28,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate
                NumberTextField.text!.count - range.length
 
             
-            if NumOfWords > 3  {
+            if NumOfWords > 3
+            {
                 return false
             }
             

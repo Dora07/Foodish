@@ -77,17 +77,17 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Dora-->
         <scene sceneID="jJ6-Ib-Ax5">
             <objects>
-                <viewController id="pRP-vx-DCw" sceneMemberID="viewController">
+                <viewController id="pRP-vx-DCw" customClass="HomePageViewController" customModule="Foodish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oSL-ED-9QP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qMD-AR-u3n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fTS-Sl-XV3"/>
+                    <navigationItem key="navigationItem" title="Dora" id="fTS-Sl-XV3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xZy-yi-TSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,6 +112,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.057596392929553986" green="0.060855984687805176" blue="0.019032211974263191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="Group 1412" width="421" height="79"/>
         <image name="Group 1413" width="421" height="79"/>
