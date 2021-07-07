@@ -5,6 +5,7 @@ import UIKit
 class HomePageViewController: UIViewController
 {
 
+    @IBOutlet weak var ImageSegmentControl: UISegmentedControl!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -26,11 +27,24 @@ class HomePageViewController: UIViewController
             let BakBtn = UIBarButtonItem(image:SmallImage.withRenderingMode(.alwaysOriginal), style:.plain, target: navigationController, action: #selector(UINavigationController.popViewController(animated:)))
         
             navigationItem.leftBarButtonItem = BakBtn
+    }
+    
+ 
 
+
+ }
+    
+    
+    @IBAction func ImageSegmntControlAction(_ sender: Any)
+    {
+        
+       
         
     }
     
-
-
-}
+    
+    
+    
+    
+    
 }
