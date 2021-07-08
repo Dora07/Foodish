@@ -33,7 +33,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22" scale="default"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pRP-vx-DCw" kind="show" id="iq4-Kj-2CN"/>
+                                    <segue destination="pRP-vx-DCw" kind="push" identifier="ImageNumberPass" id="2s6-sm-hIn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnt-BG-75y">
@@ -80,7 +80,6 @@
         <!--Dora-->
         <scene sceneID="jJ6-Ib-Ax5">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xZy-yi-TSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="pRP-vx-DCw" customClass="HomePageViewController" customModule="Foodish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oSL-ED-9QP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -234,13 +233,13 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLA-7k-WOM" customClass="AlllmageViewController">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                                                 <connections>
-                                                    <segue destination="LQg-JV-NYV" kind="embed" id="1Vt-zK-tGB"/>
+                                                    <segue destination="LQg-JV-NYV" kind="embed" id="GjJ-b0-HRE"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UC-pV-9OM">
                                                 <rect key="frame" x="414" y="0.0" width="414" height="568"/>
                                                 <connections>
-                                                    <segue destination="xgj-nT-Y3i" kind="embed" id="Yvg-WJ-GfA"/>
+                                                    <segue destination="xgj-nT-Y3i" kind="embed" id="L14-IT-nKJ"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -292,6 +291,7 @@
                         <outlet property="ImageSegmentedControl" destination="rBu-gi-QNL" id="30r-3f-Pgp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZy-yi-TSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1966.6666666666667" y="93.75"/>
         </scene>
@@ -323,16 +323,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78X-HC-EEV">
-                                <rect key="frame" x="20" y="381" width="98" height="21"/>
+                                <rect key="frame" x="20" y="381" width="202" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HLJ-hl-VCh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="poJ-na-pvl"/>
+                    <connections>
+                        <outlet property="NumberYouChose" destination="78X-HC-EEV" id="2f9-Cd-eTC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJY-VQ-g7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,6 +379,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

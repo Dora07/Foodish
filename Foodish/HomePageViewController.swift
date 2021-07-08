@@ -4,8 +4,8 @@ import UIKit
 //滑動停止時計算目前所在的分頁位置，更新 segmented control的Index
 extension HomePageViewController: UIScrollViewDelegate
 {
-  
-    func ScrollViewDidEndDecelerating(scrollView:UIScrollView)
+    
+  func ScrollViewDidEndDecelerating(scrollView:UIScrollView)
     {        let index = Int(scrollView.contentOffset.x / scrollView.bounds.width)
        ImageSegmentedControl.selectedSegmentIndex = index
         
@@ -16,17 +16,19 @@ extension HomePageViewController: UIScrollViewDelegate
 
 class HomePageViewController: UIViewController
 {
-
+   
+   
+   
     @IBOutlet weak var ImageSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var ImageChangeScrollView: UIScrollView!
     
- 
     
-    
-    
+   
     override func viewDidLoad()
     {
+        
+        
         super.viewDidLoad()
         //變更圖片大小
         func ReSizeImage(image: UIImage, width: CGFloat) -> UIImage {
@@ -62,6 +64,7 @@ class HomePageViewController: UIViewController
     
  
     
+
     
     
     

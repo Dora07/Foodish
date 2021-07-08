@@ -3,8 +3,9 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate
 {
-
+   
     
+   
     @IBOutlet weak var NumberTextField: UITextField!
     
     
@@ -49,6 +50,20 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
     {
         let Number = Int.random(in: 1...20)
         NumberTextField.text = "\(Number)"
+       
+    }
+    
+   var DayOfNumber = "123"
+    override func prepare (for segue :UIStoryboardSegue ,sender: Any?)
+    {
+       
+        if segue .identifier == "OneImage"
+        {
+            if let OiVC = segue .destination as? OneImageViewController
+            {
+                OiVC.MyNumber = DayOfNumber
+            }
+        }
         
     }
     
