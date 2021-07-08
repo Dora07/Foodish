@@ -1,11 +1,30 @@
 
 
 import UIKit
+//滑動停止時計算目前所在的分頁位置，更新 segmented control的Index
+extension HomePageViewController: UIScrollViewDelegate
+{
+  
+    func ScrollViewDidEndDecelerating(scrollView:UIScrollView)
+    {        let index = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+       ImageSegmentedControl.selectedSegmentIndex = index
+        
+    }
+    
+}
+
 
 class HomePageViewController: UIViewController
 {
 
-    @IBOutlet weak var ImageSegmentControl: UISegmentedControl!
+    @IBOutlet weak var ImageSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var ImageChangeScrollView: UIScrollView!
+    
+ 
+    
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -27,21 +46,21 @@ class HomePageViewController: UIViewController
             let BakBtn = UIBarButtonItem(image:SmallImage.withRenderingMode(.alwaysOriginal), style:.plain, target: navigationController, action: #selector(UINavigationController.popViewController(animated:)))
         
             navigationItem.leftBarButtonItem = BakBtn
+   
+       
+        }
+    
+  }
+    //點選 segmented control時捲動 scrollview 
+    @IBAction func ImageChangePage(_ sender: UISegmentedControl)
+    {
+        let x = CGFloat(sender.selectedSegmentIndex) * ImageChangeScrollView.bounds.width
+                let offset = CGPoint(x: x, y: 0)
+        ImageChangeScrollView.setContentOffset(offset, animated: true)
+        
     }
     
  
-
-
- }
-    
-    
-    @IBAction func ImageSegmntControlAction(_ sender: Any)
-    {
-        
-       
-        
-    }
-    
     
     
     

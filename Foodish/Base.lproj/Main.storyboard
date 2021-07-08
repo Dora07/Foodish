@@ -222,7 +222,7 @@
                                     <segment title="" image="Group 25"/>
                                 </segments>
                                 <connections>
-                                    <action selector="ImageSegmntControlAction:" destination="pRP-vx-DCw" eventType="valueChanged" id="xIz-Py-DkC"/>
+                                    <action selector="ImageChangePage:" destination="pRP-vx-DCw" eventType="valueChanged" id="wga-tb-QAv"/>
                                 </connections>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-mO-y7T">
@@ -256,6 +256,9 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="irX-3s-GTq"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="MFN-jj-xk9"/>
+                                <connections>
+                                    <outlet property="delegate" destination="pRP-vx-DCw" id="OJE-Q9-v6G"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qMD-AR-u3n"/>
@@ -285,7 +288,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Dora" id="fTS-Sl-XV3"/>
                     <connections>
-                        <outlet property="ImageSegmentControl" destination="rBu-gi-QNL" id="92c-gy-UwM"/>
+                        <outlet property="ImageChangeScrollView" destination="sJz-mO-y7T" id="JGO-za-ian"/>
+                        <outlet property="ImageSegmentedControl" destination="rBu-gi-QNL" id="30r-3f-Pgp"/>
                     </connections>
                 </viewController>
             </objects>
@@ -313,13 +317,26 @@
                     <view key="view" contentMode="scaleToFill" id="dbh-dt-ZjK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M0S-5a-l6r">
+                                <rect key="frame" x="20" y="44" width="374" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78X-HC-EEV">
+                                <rect key="frame" x="20" y="381" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HLJ-hl-VCh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJY-VQ-g7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2884" y="324"/>
+            <point key="canvasLocation" x="2882.608695652174" y="323.4375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IwN-wI-xkf">
