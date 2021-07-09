@@ -3,7 +3,7 @@ import UIKit
 class OneImageViewController: UIViewController
 {
  
-    var NumberOfImage : String?
+    var NumberOfImage : Int?
 
     @IBOutlet weak var NumberYouChose: UILabel!
     @IBOutlet weak var FoodImge: UIImageView!
@@ -11,7 +11,7 @@ class OneImageViewController: UIViewController
     {
         super.viewDidLoad()
 
-        NumberYouChose.text = NumberOfImage
+        NumberYouChose.text = "\(NumberOfImage!)"
         TakeImage()
     }
     

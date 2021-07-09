@@ -64,7 +64,7 @@ class HomePageViewController: UIViewController
     }
     
  
-    var NumberOfImage : String?
+    var NumberOfImage : Int?
     
     override func prepare (for segue :UIStoryboardSegue ,sender: Any?)
     {
@@ -72,6 +72,9 @@ class HomePageViewController: UIViewController
         let oneImgeViewController = segue.destination as? OneImageViewController
         oneImgeViewController?.NumberOfImage = NumberOfImage
         
+      let allImgeViewController = segue.destination as? AllBurgerCollectionViewController
+      allImgeViewController?.NumberOfImage = NumberOfImage
+       
         
         
     }

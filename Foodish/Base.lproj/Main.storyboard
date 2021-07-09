@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -233,7 +234,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLA-7k-WOM" customClass="AlllmageViewController">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                                                 <connections>
-                                                    <segue destination="LQg-JV-NYV" kind="embed" id="GjJ-b0-HRE"/>
+                                                    <segue destination="7fw-QD-lI3" kind="embed" id="AI0-1f-qAp"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0UC-pV-9OM">
@@ -295,20 +296,53 @@
             </objects>
             <point key="canvasLocation" x="1966.6666666666667" y="93.75"/>
         </scene>
-        <!--All Image View Controller-->
-        <scene sceneID="VFj-bN-OgM">
+        <!--All Burger Collection View Controller-->
+        <scene sceneID="11U-Du-7Op">
             <objects>
-                <viewController id="LQg-JV-NYV" customClass="AllImageViewController" customModule="Foodish" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9bj-la-vFI">
+                <collectionViewController id="7fw-QD-lI3" customClass="AllBurgerCollectionViewController" customModule="Foodish" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="VQ6-XU-8xD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="gmh-Tg-QIZ"/>
-                        <color key="backgroundColor" systemColor="linkColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B5C-E4-tkm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jHc-ON-7Ye">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllBurgerCollectionViewCell" id="JLM-9M-5tx" customClass="AllBurgerCollectionViewCell" customModule="Foodish" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ocD-Pb-ud8">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger0" translatesAutoresizingMaskIntoConstraints="NO" id="DXI-Be-huu">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="DXI-Be-huu" secondAttribute="bottom" id="CqB-9k-DKC"/>
+                                        <constraint firstAttribute="trailing" secondItem="DXI-Be-huu" secondAttribute="trailing" id="F6m-9C-PNB"/>
+                                        <constraint firstItem="DXI-Be-huu" firstAttribute="leading" secondItem="ocD-Pb-ud8" secondAttribute="leading" id="Q5N-6G-qZI"/>
+                                        <constraint firstItem="DXI-Be-huu" firstAttribute="top" secondItem="ocD-Pb-ud8" secondAttribute="top" id="h4P-GC-aq7"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="AllBurgerImage" destination="DXI-Be-huu" id="ipr-o7-lkK"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="7fw-QD-lI3" id="ZOx-rX-qFU"/>
+                            <outlet property="delegate" destination="7fw-QD-lI3" id="0Fh-TU-s8w"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RH3-P6-pwn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2885" y="-142"/>
+            <point key="canvasLocation" x="2794.202898550725" y="-281.25"/>
         </scene>
         <!--One Image View Controller-->
         <scene sceneID="g7D-sG-z3C">
@@ -379,11 +413,9 @@
         <image name="Group 25" width="15.5" height="15"/>
         <image name="More" width="64" height="57"/>
         <image name="Profile Image" width="154" height="154"/>
+        <image name="burger0" width="700" height="360"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

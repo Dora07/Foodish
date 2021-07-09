@@ -16,7 +16,8 @@
 		86903703269334B700BC5141 /* FoodishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86903702269334B700BC5141 /* FoodishTests.swift */; };
 		8690370E269334B700BC5141 /* FoodishUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690370D269334B700BC5141 /* FoodishUITests.swift */; };
 		8690371F26936DF000BC5141 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8690371E26936DF000BC5141 /* SecondViewController.swift */; };
-		86B6467C26961589005637B6 /* AllImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B6467B26961589005637B6 /* AllImageViewController.swift */; };
+		86ABA7122698B18600BE43E6 /* AllBurgerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ABA7112698B18600BE43E6 /* AllBurgerCollectionViewController.swift */; };
+		86ABA7172698B1A500BE43E6 /* AllBurgerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ABA7162698B1A500BE43E6 /* AllBurgerCollectionViewCell.swift */; };
 		86B6468126961597005637B6 /* OneImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B6468026961597005637B6 /* OneImageViewController.swift */; };
 		86C2D9DF26944353009C0BEA /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C2D9DE26944353009C0BEA /* HomePageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +55,8 @@
 		8690370D269334B700BC5141 /* FoodishUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodishUITests.swift; sourceTree = "<group>"; };
 		8690370F269334B700BC5141 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8690371E26936DF000BC5141 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		86B6467B26961589005637B6 /* AllImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImageViewController.swift; sourceTree = "<group>"; };
+		86ABA7112698B18600BE43E6 /* AllBurgerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBurgerCollectionViewController.swift; sourceTree = "<group>"; };
+		86ABA7162698B1A500BE43E6 /* AllBurgerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBurgerCollectionViewCell.swift; sourceTree = "<group>"; };
 		86B6468026961597005637B6 /* OneImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneImageViewController.swift; sourceTree = "<group>"; };
 		86C2D9DE26944353009C0BEA /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,8 +114,9 @@
 				869036EF269334B400BC5141 /* ViewController.swift */,
 				8690371E26936DF000BC5141 /* SecondViewController.swift */,
 				86C2D9DE26944353009C0BEA /* HomePageViewController.swift */,
-				86B6467B26961589005637B6 /* AllImageViewController.swift */,
 				86B6468026961597005637B6 /* OneImageViewController.swift */,
+				86ABA7112698B18600BE43E6 /* AllBurgerCollectionViewController.swift */,
+				86ABA7162698B1A500BE43E6 /* AllBurgerCollectionViewCell.swift */,
 				869036F1269334B400BC5141 /* Main.storyboard */,
 				869036F4269334B600BC5141 /* Assets.xcassets */,
 				869036F6269334B600BC5141 /* LaunchScreen.storyboard */,
@@ -270,12 +273,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86B6467C26961589005637B6 /* AllImageViewController.swift in Sources */,
 				8690371F26936DF000BC5141 /* SecondViewController.swift in Sources */,
+				86ABA7172698B1A500BE43E6 /* AllBurgerCollectionViewCell.swift in Sources */,
 				869036F0269334B400BC5141 /* ViewController.swift in Sources */,
 				869036EC269334B400BC5141 /* AppDelegate.swift in Sources */,
 				86B6468126961597005637B6 /* OneImageViewController.swift in Sources */,
 				86C2D9DF26944353009C0BEA /* HomePageViewController.swift in Sources */,
+				86ABA7122698B18600BE43E6 /* AllBurgerCollectionViewController.swift in Sources */,
 				869036EE269334B400BC5141 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

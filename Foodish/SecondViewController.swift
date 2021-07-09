@@ -58,7 +58,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
     {
        
         let homePageViewController = segue.destination as? HomePageViewController
-        homePageViewController?.NumberOfImage = NumberTextField.text
+        homePageViewController?.NumberOfImage = Int(NumberTextField.text!)
         
         
         
