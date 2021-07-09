@@ -53,17 +53,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
        
     }
     
-   var DayOfNumber = "123"
+   
     override func prepare (for segue :UIStoryboardSegue ,sender: Any?)
     {
        
-        if segue .identifier == "OneImage"
-        {
-            if let OiVC = segue .destination as? OneImageViewController
-            {
-                OiVC.MyNumber = DayOfNumber
-            }
-        }
+        let homePageViewController = segue.destination as? HomePageViewController
+        homePageViewController?.NumberOfImage = NumberTextField.text
+        
+        
         
     }
     

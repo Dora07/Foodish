@@ -19,6 +19,7 @@ class HomePageViewController: UIViewController
    
    
    
+   
     @IBOutlet weak var ImageSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var ImageChangeScrollView: UIScrollView!
@@ -63,7 +64,17 @@ class HomePageViewController: UIViewController
     }
     
  
+    var NumberOfImage : String?
     
+    override func prepare (for segue :UIStoryboardSegue ,sender: Any?)
+    {
+       
+        let oneImgeViewController = segue.destination as? OneImageViewController
+        oneImgeViewController?.NumberOfImage = NumberOfImage
+        
+        
+        
+    }
 
     
     

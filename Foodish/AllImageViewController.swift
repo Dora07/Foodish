@@ -1,14 +1,11 @@
-//
-//  AllImageViewController.swift
-//  Foodish
-//
-//  Created by 謝孟芩 on 2021/7/8.
-//
+
 
 import UIKit
 
 class AllImageViewController: UIViewController {
 
+    var NumberOfImage : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
