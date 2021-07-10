@@ -57,12 +57,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dp6-lU-3e1">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="12344" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp6-lU-3e1">
                                 <rect key="frame" x="0.0" y="433" width="414" height="452"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -72,6 +72,7 @@
                     <navigationItem key="navigationItem" title="FaSwift Interview Poject" id="BDn-O3-Gda"/>
                     <connections>
                         <outlet property="NumberTextField" destination="mqP-el-nRL" id="8rD-8A-KXm"/>
+                        <outlet property="URLTextView" destination="Dp6-lU-3e1" id="bJB-cU-Oom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

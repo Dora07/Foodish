@@ -4,6 +4,9 @@ import UIKit
 //滑動停止時計算目前所在的分頁位置，更新 segmented control的Index
 extension HomePageViewController: UIScrollViewDelegate
 {
+  
+    
+    
     
   func ScrollViewDidEndDecelerating(scrollView:UIScrollView)
     {        let index = Int(scrollView.contentOffset.x / scrollView.bounds.width)
@@ -74,6 +77,7 @@ class HomePageViewController: UIViewController
         
       let allImgeViewController = segue.destination as? AllBurgerCollectionViewController
       allImgeViewController?.NumberOfImage = NumberOfImage
+      
        
         
         

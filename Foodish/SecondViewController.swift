@@ -2,12 +2,14 @@
 import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate
+
 {
    
     
    
     @IBOutlet weak var NumberTextField: UITextField!
     
+    @IBOutlet weak var URLTextView: UITextView!
     
     override func viewDidLoad()
     {
@@ -59,12 +61,12 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
        
         let homePageViewController = segue.destination as? HomePageViewController
         homePageViewController?.NumberOfImage = Int(NumberTextField.text!)
-        
+       
         
         
     }
     
-    
+ 
     
     
     

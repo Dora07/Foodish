@@ -3,9 +3,12 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+
+
+
 class AllBurgerCollectionViewController: UICollectionViewController
 {
-
+   
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -31,6 +34,8 @@ class AllBurgerCollectionViewController: UICollectionViewController
     {
         
         return Int(NumberOfImage!)
+        
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
@@ -43,23 +48,43 @@ class AllBurgerCollectionViewController: UICollectionViewController
         
         let urlStr = "https://foodish-api.herokuapp.com/images/burger/burger\( NumberOfImage!).jpg"
         
-        if let url = URL(string: urlStr) {
-            //於其他執行緒open file, read content
+        
+      
+        if let url = URL(string: urlStr)
+        {
+           
+           
             URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let data = data {
-                    //主執行緒執行 display content
-                    DispatchQueue.main.async {
+                if let data = data
+                {
+                 
+                    DispatchQueue.main.async
+                    {
                         cell.AllBurgerImage.image = UIImage(data: data)
+                
+                        
+                        
                     }
+                   
                 }
             }.resume() //執行task
-       
-        
-    
+           
+            print("the url = \(urlStr)")
+          
+          
+         
         return cell
     }
+     
         return cell
 
-
+        
+       
+        
+        
+        
+        
+        
+        
 }
 }
