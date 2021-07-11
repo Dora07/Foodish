@@ -4,18 +4,18 @@ import UIKit
 class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureRecognizerDelegate
 
 {
-   
+    
     
    
     @IBOutlet weak var NumberTextField: UITextField!
     
-    @IBOutlet weak var URLTextView: UITextView!
+ 
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         NumberTextField.delegate = self
-     
+        
     
         
     }
@@ -55,19 +55,18 @@ class SecondViewController: UIViewController, UITextFieldDelegate, UIGestureReco
        
     }
     
-   
+   //傳遞資料
     override func prepare (for segue :UIStoryboardSegue ,sender: Any?)
     {
        
         let homePageViewController = segue.destination as? HomePageViewController
         homePageViewController?.NumberOfImage = Int(NumberTextField.text!)
        
-        
+     
         
     }
     
  
-    
     
     
 }

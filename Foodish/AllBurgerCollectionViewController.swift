@@ -29,15 +29,15 @@ class AllBurgerCollectionViewController: UICollectionViewController
         return 1
     }
 
-
+   //重複顯出數量照片
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        
+       
         return Int(NumberOfImage!)
         
-        
-    }
+  }
 
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(AllBurgerCollectionViewCell.self)", for: indexPath) as! AllBurgerCollectionViewCell
@@ -69,7 +69,7 @@ class AllBurgerCollectionViewController: UICollectionViewController
                 }
             }.resume() //執行task
            
-            print("the url = \(urlStr)")
+          
           
           
          

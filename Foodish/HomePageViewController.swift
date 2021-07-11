@@ -8,7 +8,7 @@ extension HomePageViewController: UIScrollViewDelegate
     
     
     
-  func ScrollViewDidEndDecelerating(scrollView:UIScrollView)
+    private func ScrollViewDidEndDecelerating(scrollView:UIScrollView)
     {        let index = Int(scrollView.contentOffset.x / scrollView.bounds.width)
        ImageSegmentedControl.selectedSegmentIndex = index
         
@@ -18,6 +18,7 @@ extension HomePageViewController: UIScrollViewDelegate
 
 
 class HomePageViewController: UIViewController
+    
 {
    
    
@@ -43,6 +44,13 @@ class HomePageViewController: UIViewController
                     image.draw(in: Renderer.format.bounds)
                 }
                 return NewImage
+            
+            
+            
+            
+            
+            
+            
         }
         
         //  navigationItem 返回鍵變更圖片
@@ -68,7 +76,7 @@ class HomePageViewController: UIViewController
     
  
     var NumberOfImage : Int?
-    
+    //傳遞資料
     override func prepare (for segue :UIStoryboardSegue ,sender: Any?)
     {
        
